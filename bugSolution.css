@@ -1,0 +1,27 @@
+The solution involves carefully using parentheses to control the order of operations within the `calc()` function.  Always ensure that the calculations are performed in the intended order.
+
+Here's how to correct the issues shown in the `bug.css` file:
+
+```css
+/* Correct usage of calc() */
+.element {
+  width: calc(50% - 100px);
+}
+
+/* Correctly parenthesized example */
+.element {
+  width: calc((50% - 100px) + 50px);
+}
+
+/* Avoid using 100% + 50% in calc(). A better way of doing this is using a percentage and a media query.*/
+.element {
+ width: 100%;
+}
+@media (min-width: 768px) {
+ .element {
+  width: 150%;
+ }
+}
+```
+
+By explicitly grouping operations with parentheses, we ensure the calculations are performed correctly. The corrected `bugSolution.css` file shows the correct implementation.  The example with `100% + 50%` highlights that using `calc()` to increase a size by a percentage might not be the best way.  Using media queries might be a more appropriate solution in this case.
