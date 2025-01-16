@@ -1,0 +1,3 @@
+# Uncommon CSS `calc()` Function Errors
+
+This repository demonstrates some uncommon errors that can arise when using the CSS `calc()` function, particularly when combining percentages and fixed lengths.  The examples highlight how incorrect parenthesis placement and operator precedence can lead to unexpected behavior and layout issues.  The `bug.css` file contains the erroneous code, and `bugSolution.css` shows the corrected versions with explanations.
