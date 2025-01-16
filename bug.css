@@ -1,0 +1,29 @@
+The following CSS code snippet demonstrates an uncommon error that can occur when using the `calc()` function with percentages and lengths.  The issue is caused by improper use of parentheses and operator precedence within the `calc()` function which might lead to unexpected results. 
+
+```css
+.element {
+  width: calc(50% - 100px);
+}
+```
+
+This code intends to set the width of the `.element` to 50% of its containing element's width, minus 100 pixels. However, depending on the browser's interpretation, the subtraction might be performed before the percentage calculation, resulting in an incorrect width.
+
+Another example where the parenthesis are missing or misplaced:
+
+```css
+.element {
+  width: calc(50% - 100px + 50px);
+}
+```
+
+This results in unexpected behaviour depending on the order of operations.  
+
+Another example of unexpected results using calc() and percentages:
+
+```css
+.element {
+  width: calc(100% + 50%);
+}
+```
+
+The browser might treat `100%+50%` as `150%` and overflow the container, or it might show an unexpected result.
